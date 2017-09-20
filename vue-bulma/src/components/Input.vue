@@ -2,7 +2,11 @@
   <div class="field">
     <label class="label">{{label}}</label>
     <div class="control">
-      <input class="input" :type="type" :placeholder="placeholder">
+      <input class="input" :value="value"
+                           :type="type"
+                           @input="$emit('input', $event.target.value)"
+                           :placeholder="placeholder"
+                           >
     </div>
   </div>
 </template>
@@ -12,6 +16,7 @@
     props: {
       label: String,
       placeholder: String,
+      value: [String, Number],
       type: {
         type: String,
         default: 'text'
