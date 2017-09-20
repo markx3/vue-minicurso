@@ -4,8 +4,10 @@
       <section calss="section">
         <form>
           <bulma-input label="Nome"
+                       v-model="name"
                        placeholder="Nome da pessoa"></bulma-input>
           <bulma-input label="Idade"
+                       v-model="age"
                        placeholder="Idade da pessoa"
                        type="number"></bulma-input>
           <bulma-button class="is-primary" @click="onClick()">
@@ -32,6 +34,8 @@ export default {
     return {
       titulo: 'Vue.js pra quem nunca viu',
       subtitulo: 'Bulma.io',
+      name: null,
+      age: null
     }
   },
   methods: {
