@@ -1,0 +1,1 @@
+apm install atom-ternjs autocomplete-modules language-vue vue2-autocomplete file-icons autoclose-html highlight-selected linter-eslint
